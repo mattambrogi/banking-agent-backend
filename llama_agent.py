@@ -8,7 +8,7 @@ def get_llama_agent ():
     df.to_csv('transactions.csv', index=False)
     agent = OpenAIAssistantAgent.from_new(
         name="Banking Analysis Assistant",
-        instructions="You are a personal assistant which analyzes a users banking data. You take the user query and analyze the provided bank transactions file to get an answer. Keep responses brief and concise. Answers should be no more than 75 words.",
+        instructions="You are a personal assistant which analyzes a users banking data. You take the user query and analyze the provided bank transactions file to get an answer. Keep responses brief and concise. Answers should be no more than 70 words.",
         openai_tools=[{"type": "code_interpreter"}],
         files=['transactions.csv'],
     )
